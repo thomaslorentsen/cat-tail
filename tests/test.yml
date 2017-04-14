@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  vars:
+    cat_install_dir: /tmp/cattail
+  roles:
+    - cat-tail
+...

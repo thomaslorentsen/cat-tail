@@ -9,4 +9,13 @@
     src: cattail.sh
     dest: "{{ cat_install_dir }}/cattail.sh"
     mode: "a+x"
+
+- name: install service
+  become: yes
+  template:
+    src: cattail.conf
+    dest: "/etc/supervisor/conf.d/cattail.conf"
+  notify:
+    - reload supervisor config
+    - restart cattail service
 ...

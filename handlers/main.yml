@@ -1,0 +1,11 @@
+---
+- name: reload supervisor config
+  become: yes
+  command: supervisorctl reread
+
+- name: restart cattail service
+  become: yes
+  supervisorctl:
+    name: cat_tail
+    state: restarted
+...
