@@ -1,0 +1,6 @@
+---
+cat_install_dir: bin
+cat_log_files:
+  /var/log/system.log
+  /var/log/install.log
+...

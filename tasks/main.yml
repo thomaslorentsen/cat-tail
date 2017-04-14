@@ -1,4 +1,9 @@
 ---
+- name: create application directory
+  file:
+    dest: "{{ cat_install_dir }}"
+    state: directory
+
 - name: install shell script
   template:
     src: cattail.sh
