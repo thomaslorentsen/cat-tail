@@ -9,6 +9,8 @@
     src: cattail.sh
     dest: "{{ cat_install_dir }}/cattail.sh"
     mode: "a+x"
+  notify:
+    - restart cat tail service
 
 - name: install service
   become: yes
@@ -17,5 +19,5 @@
     dest: "/etc/supervisor/conf.d/cattail.conf"
   notify:
     - reload supervisor config
-    - restart cattail service
+    - restart cat tail service
 ...

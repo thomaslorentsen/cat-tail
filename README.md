@@ -1,12 +1,12 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Installs a service that tails multiple logs
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This roles needs supervisor to be installed
 
 Role Variables
 --------------
@@ -25,7 +25,12 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - cat_tail:
+          cat_install_dir: /opt/cattail
+          cat_log_files:
+            /var/log/service_one.log
+            /var/log/service_two.log
+            /var/log/service_three.log
 
 License
 -------

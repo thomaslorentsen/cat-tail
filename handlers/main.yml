@@ -3,7 +3,7 @@
   become: yes
   command: supervisorctl reread
 
-- name: restart cattail service
+- name: restart cat tail service
   become: yes
   supervisorctl:
     name: cat_tail
