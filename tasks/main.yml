@@ -1,0 +1,7 @@
+---
+- name: install shell script
+  template:
+    src: cattail.sh
+    dest: "{{ cat_install_dir }}/cattail.sh"
+    mode: "a+x"
+...
