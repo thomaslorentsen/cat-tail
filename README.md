@@ -1,4 +1,4 @@
-Role Name
+Cat Tail
 =========
 
 Installs a service that tails multiple logs
