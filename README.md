@@ -1,4 +1,4 @@
-Cat Tail
+Ansible Role: Cat Tail
 =========
 
 Installs a service that tails multiple logs
