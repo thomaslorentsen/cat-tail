@@ -4,4 +4,6 @@ cat_log_files:
   /var/log/system.log
   /var/log/install.log
 cat_user: root
+auto_start: true
+log_directory: /var/log
 ...
